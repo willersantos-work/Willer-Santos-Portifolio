@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md"
 import Link from "next/link";
 
 import { navigation, summary } from "@/content/en";
+import { ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
 
 const Summary:FC = () => {
     const { asPath } = useRouter();
@@ -31,28 +32,28 @@ const Summary:FC = () => {
             </p>
             <div className="mt-10 flex flex-col space-y-3">
                 <Link 
-                    className={`rounded-lg text-slate-300 font-light cursor-pointer w-44 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium ${activeTab === "about" ? "bg-white/10 rounded-lg font-medium" : ""}}`}
+                    className={`rounded-lg text-slate-300 flex font-light cursor-pointer w-48 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium}`}
                     href="#about"
                 >
-                    • &ensp; {navigation.about}
+                    <ChevronDoubleRightIcon className="w-5" /> &ensp; {navigation.about}
                 </Link>
                 <Link 
-                    className={`rounded-lg text-slate-300 font-light cursor-pointer w-44 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium ${activeTab === "skills" ? "bg-white/10 rounded-lg font-medium" : ""}}`}
+                    className={`rounded-lg text-slate-300 flex font-light cursor-pointer w-48 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium}`}
                     href="#skills"
                 >
-                    • &ensp; {navigation.skills}
+                    <ChevronDoubleRightIcon className="w-5" /> &ensp; {navigation.skills}
                 </Link>
                 <Link 
-                    className={`rounded-lg text-slate-300 font-light cursor-pointer w-44 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium ${activeTab === "experience" ? "bg-white/10 rounded-lg font-medium" : ""}}`}
+                    className={`rounded-lg text-slate-300 flex font-light cursor-pointer w-48 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium}`}
                     href="#experience"
                 >
-                    • &ensp; {navigation.experience}
+                    <ChevronDoubleRightIcon className="w-5" /> &ensp; {navigation.experience}
                 </Link>
                 <Link 
-                    className={`rounded-lg text-slate-300 font-light cursor-pointer w-44 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium ${activeTab === "projects" ? "bg-white/10 rounded-lg font-medium" : ""}}`}
+                    className={`rounded-lg text-slate-300 flex font-light cursor-pointer w-48 p-2 pl-4 hover:bg-white/10 hover:rounded-lg transition-all hover:font-medium}`}
                     href="#projects"
                 >
-                    • &ensp; {navigation.projects}
+                    <ChevronDoubleRightIcon className="w-5" /> &ensp; {navigation.projects}
                 </Link>
             </div>
             <div className="mt-20 flex flex-row space-x-4 ml-3">

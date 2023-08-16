@@ -5,10 +5,10 @@ import { skills } from "@/content/skills";
 const Skills: FC = () => {
     return (
         <div id="skills">
-            <h1 className="mt-20 text-2xl font-base tracking-tight text-white">
+            <h1 className="pt-20 text-2xl font-base tracking-tight text-cyan-200">
                 Skills
             </h1>
-            <div className="flex flex-wrap justify-start mt-4">
+            <div className="flex flex-wrap justify-start mt-4 p-2 pl-4 rounded-xl bg-[#1e2d414d]">
                 {
                     skills.map(({name, Icon}, index) => (
                         <div key={index} className="flex flex-col items-center justify-center py-5 pr-8">

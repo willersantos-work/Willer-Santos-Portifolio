@@ -1,4 +1,4 @@
-import { SiTypescript, SiJavascript, SiNodedotjs, SiNestjs, SiReact, SiDocker, SiAmazonaws, SiAwsamplify, SiAwslambda, SiGithubactions, SiServerless, SiPython } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiNodedotjs, SiNestjs, SiReact, SiDocker, SiAmazonaws, SiAwsamplify, SiAwslambda, SiGithubactions, SiServerless, SiPython, SiPostgresql, SiMongodb } from "react-icons/si";
 
 export const skills = [
     {
@@ -49,4 +49,12 @@ export const skills = [
         name: "Lambda",
         Icon: SiAwslambda,
     },
+    {
+        name: 'PostgreSQL',
+        Icon: SiPostgresql
+    },
+    {
+        name: 'MongoDB',
+        Icon: SiMongodb
+    }
 ];

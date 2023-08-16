@@ -5,7 +5,7 @@ import { aboutMe } from "@/content/en";
 const About:FC = () => {
     return (
         <div id="about">
-            <h1 className="mt-10 text-2xl font-base tracking-tight text-white">
+            <h1 className="pt-20 text-2xl font-base tracking-tight text-cyan-200">
                 About me
             </h1>
             {aboutMe.map((paragraph, index) => (
