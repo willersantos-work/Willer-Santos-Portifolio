@@ -1,38 +1,30 @@
-import { FC } from "react"
+import { FC, useRef, useEffect } from "react"
 
 import BackgroundPattern from "@/components/BackgroundPattern"
 import Summary from "@/components/Summary"
-import { summary } from "@/content/en"
+import About from "@/components/About"
+import Skills from "@/components/Skills"
 
 const Home:FC = () => {
+    const ref = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash && ref.current) {
+            ref.current.scrollIntoView({ behavior: "auto", block: "start" });
+        }
+    }, []);
+
     return(
         <div className="relative isolate overflow-hidden bg-gray-900">
+            <title>Bruno Koga | Software Engineer</title>
             <BackgroundPattern />
-            <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-15 flex justify-between">
-                <Summary
-                    name={summary.name}
-                    email={summary.email}
-                    role={summary.role}
-                    company={summary.company}
-                    bio={summary.bio}
-                    githubLink={summary.githubLink}
-                    linkedinLink={summary.linkedinLink}
-                    mediumLink={summary.mediumLink}
-                    twitterLink={summary.twitterLink}
-                    instagramLink={summary.instagramLink}
-                />
-                <Summary
-                    name={summary.name}
-                    email={summary.email}
-                    role={summary.role}
-                    company={summary.company}
-                    bio={summary.bio}
-                    githubLink={summary.githubLink}
-                    linkedinLink={summary.linkedinLink}
-                    mediumLink={summary.mediumLink}
-                    twitterLink={summary.twitterLink}
-                    instagramLink={summary.instagramLink}
-                />
+            <div className="mx-auto max-w-10xl h-screen px-6 pb-24 pt-10 sm:pb-32 lg:flex md:flex lg:justify-evenly md:justify-evenly lg:px-8 lg:py-15">
+                <Summary />
+                <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-4xl lg:pt-8 lg:w-1/2 md:w-1/2  p-5 overflow-y-scroll">
+                    <About />
+                    <Skills />
+                </div>
             </div>
         </div>
     )
