@@ -2,14 +2,24 @@ import { FC } from "react";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 
-import { projects } from "@/content/en";
 import Badge from "../Badge";
 
-const Projects: FC = () => {
+interface ProjectProps {
+    title: string;
+    projects: {
+        title: string;
+        description: string;
+        image: string;
+        url: string;
+        technologies: string[];
+    }[];
+}
+
+const Projects: FC<ProjectProps> = ({ projects, title }) => {
     return (
         <div id="projects">
             <h1 className="pt-20 text-2xl font-base tracking-tight text-cyan-200">
-                Projects
+                {title}
             </h1>
             <div className="flex flex-wrap justify-start mt-4 space-y-4">
                 {

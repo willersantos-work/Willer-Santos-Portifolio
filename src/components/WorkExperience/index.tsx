@@ -1,13 +1,23 @@
 import { FC } from "react";
 
-import { workExperience } from "@/content/en";
 import Badge from "../Badge";
 
-const WorkExperience: FC = () => {
+interface WorkExperienceProps {
+    title: string;
+    workExperience: {
+        role: string;
+        company: string;
+        period: string;
+        description: string;
+        technologies: string[];
+    }[];
+}
+
+const WorkExperience: FC<WorkExperienceProps> = ({ workExperience, title }) => {
     return (
         <div id="experience">
             <h1 className="pt-20 text-2xl font-base tracking-tight text-cyan-200">
-                Work Experience
+                {title}
             </h1>
             <div className="flex flex-wrap justify-start mt-4">
                 {

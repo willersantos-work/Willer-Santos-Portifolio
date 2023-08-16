@@ -1,12 +1,18 @@
 import { FC } from "react";
 
-import { skills } from "@/content/skills";
+interface SkillsProps {
+    title: string;
+    skills: {
+        name: string;
+        Icon: any;
+    }[];
+}
 
-const Skills: FC = () => {
+const Skills: FC<SkillsProps> = ({ skills, title }) => {
     return (
         <div id="skills">
             <h1 className="pt-20 text-2xl font-base tracking-tight text-cyan-200">
-                Skills
+                {title}
             </h1>
             <div className="flex flex-wrap justify-start mt-4 p-2 pl-4 rounded-xl bg-[#1e2d414d]">
                 {

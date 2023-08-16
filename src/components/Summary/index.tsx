@@ -4,10 +4,28 @@ import { FaSquareGithub, FaLinkedin, FaMedium, } from "react-icons/fa6"
 import { MdEmail } from "react-icons/md"
 import Link from "next/link";
 
-import { navigation, summary } from "@/content/en";
 import { ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
 
-const Summary:FC = () => {
+interface SummaryProps {
+    summary: {
+        name: string;
+        role: string;
+        company?: string | null;
+        bio: string;
+        githubLink: string;
+        linkedinLink: string;
+        mediumLink: string;
+        email: string;
+    };
+    navigation: {
+        about: string;
+        skills: string;
+        experience: string;
+        projects: string;
+    };
+}
+
+const Summary:FC<SummaryProps> = ({ summary, navigation }) => {
     const { asPath } = useRouter();
     const [activeTab, setActiveTab] = useState<string | null>(null);
 
@@ -18,7 +36,7 @@ const Summary:FC = () => {
     }, [asPath]);
 
     return (
-        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 lg:w-1/2 md:w-1/2 p-5">
+        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 lg:w-1/2 md:w-1/2 p-6 bg-[#15203273] rounded-xl">
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-white">
                 {name}
             </h1>
