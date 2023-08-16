@@ -30,10 +30,10 @@ const Projects: FC<ProjectProps> = ({ projects, title }) => {
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 key={index} 
-                                className="flex lg:flex-row sm:flex-col justify-center w-full p-4 rounded-lg hover:bg-[#1e2d414d] mt-2 cursor-pointer items-start space-x-8"
+                                className="flex flex-col lg:flex-row sm:flex-col justify-center w-full p-4 rounded-lg hover:bg-[#1e2d414d] mt-2 cursor-pointer items-start lg:space-x-8"
                             >
                                 <img src={project.image} alt={project.title} className="h-24 w-40 object-cover rounded-lg ring-cyan-200 lg:mt-12 sm:ml-8 lg:ml-2" />
-                               <div>
+                                <div className="mt-2 lg:mt-0">
                                     <h1 className="mt-2 text-lg font-semibold text-white flex">{project.title} <ArrowUpRightIcon className="w-5 ml-2" /></h1>
                                     <p className="mt-2 text-sm font-normal text-gray-400">{project.description}</p>
                                     <div className="flex flex-wrap mt-2">

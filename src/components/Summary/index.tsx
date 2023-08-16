@@ -36,7 +36,7 @@ const Summary:FC<SummaryProps> = ({ summary, navigation }) => {
     }, [asPath]);
 
     return (
-        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 lg:w-1/2 md:w-1/2 p-6 bg-[#15203273] rounded-xl">
+        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8 lg:w-1/2 md:w-1/2 lg:p-6 md:p-6 p-3 bg-[#15203273] rounded-xl">
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-white">
                 {name}
             </h1>
