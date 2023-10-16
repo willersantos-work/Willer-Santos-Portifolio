@@ -2,9 +2,9 @@ export const summary = {
     name: "Bruno Henrique Koga Fazano",
     role: "Engenheiro de Software",
     bio: "Engenheiro de Software com mais de 3 anos de experiência na área, apaixonado por tecnologia e sempre em busca de novos desafios e oportunidades para aprender e crescer.",
-    company: null,
+    company: "Boston Consulting Group",
     githubLink: "https://github.com/bhkfazano",
-    linkedinLink: "https://www.linkedin.com/in/bruno-henrique-koga-fazano-31a80114a/",
+    linkedinLink: "https://www.linkedin.com/in/bruno-henrique-koga-fazano/",
     email: "bruno.koga.fazano@gmail.com",
     mediumLink: "https://medium.com/@bhkfazano",
     twitterLink: null,
@@ -21,10 +21,17 @@ export const navigation = {
 export const aboutMe = [
     "Formado em Engenharia Elétrica com ênfase em Computação (Universidade de São Paulo), tenho grande fascínio e entusiasmo por tecnologia. Sou curioso, inventivo, criativo, versátil, comunicativo e estou sempre em busca de novos desafios. Venho trabalhando com NodeJs, React, TypeScript, Docker e AWS há quase 4 anos, com um histórico de sucesso.",
     "Construí diversos sistemas bem-sucedidos e confiáveis usando essa stack, em conjunto com bancos de dados SQL e NoSQL e seguindo princípios de Clean Code. Tenho ampla experiência em escrever código escalável e eficiente, pronto para ambiente produtivo.",
-    "Atualmente resido em São Paulo, Brasil, e estou aberto a novas oportunidades."
+    "Atualmente resido em São Paulo, Brasil, e trabalho na BCG X como Engenheiro de Software."
 ];
 
 export const workExperience = [
+    {
+        company: "BCG X",
+        role: "Software Engineer",
+        period: "Out 2023 — Presente",
+        description: "",
+        technologies: ["React", "FastAPI", "Kubernetes"]
+    },
     {
         company: "igc Partners",
         role: "Engenheiro de Software",
