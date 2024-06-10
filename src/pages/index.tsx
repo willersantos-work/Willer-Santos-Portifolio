@@ -1,20 +1,22 @@
-import { FC, useRef, useEffect, useState } from "react"
+import { AboutMe } from "@/components/Content/AboutMe/AboutMe";
+import { ProjectGroup } from "@/components/Content/Projects/ProjectGroup/ProjectGroup";
+import { SkillGroup } from "@/components/Content/Skills/SkillGroup/SkillGroup";
+import { WorkExperienceGroup } from "@/components/Content/WorkExperience/WorkExperienceGroup/WorkExperienceGroup";
+import { LanguageMenu } from "@/components/Language/LanguageMenu/LanguageMenu";
+import { Summary } from "@/components/Summary/Summary";
+import enContent from "@/content/en/main";
+import ptContent from "@/content/pt/main";
+import { LanguageEnum, LanguageEnumFunc } from "@/interfaces/enum/Language.enum";
+import { IContentItem } from "@/interfaces/interfaces/IContentItem";
+import { IProject } from "@/interfaces/interfaces/IProject";
+import { IWorkExperience } from "@/interfaces/interfaces/IWorkExperience";
+import { useEffect, useRef, useState } from "react";
 
-import BackgroundPattern from "@/components/BackgroundPattern"
-import Summary from "@/components/Summary"
-import About from "@/components/About"
-import Skills from "@/components/Skills"
-import WorkExperience from "@/components/WorkExperience"
-import Projects from "@/components/Projects"
-
-import { skills } from "@/content/skills"
-import * as enContent from "@/content/en"
-import * as ptContent from "@/content/pt"
-
-const Home:FC = () => {
+const Home: React.FC = () => {
     const ref = useRef<HTMLDivElement | null>(null);
-    const [selectedLanguage, setSelectedLanguage] = useState("en");
-    const content = selectedLanguage == "en" ? enContent : ptContent;
+    const [selectedLanguage, setSelectedLanguage] = useState<LanguageEnum>(LanguageEnum.enUS);
+
+    const content = selectedLanguage === LanguageEnum.enUS ? enContent : ptContent;
 
     useEffect(() => {
         const hash = window.location.hash;
@@ -23,29 +25,40 @@ const Home:FC = () => {
         }
     }, []);
 
-    return(
-        <div className="relative isolate overflow-hidden bg-gray-900">
-            <title>Bruno Koga | Software Engineer</title>
-            <BackgroundPattern />
-            <div className="mx-auto overflow-auto sm:overflow-auto max-w-10xl h-screen px-6 pb-24 pt-10 sm:pb-32 lg:flex md:flex lg:justify-evenly md:justify-evenly lg:px-8 lg:py-15">
+    return (
+        <>
+            <div className="flex md:flex-row lg:flex-row flex-col md:justify-evenly lg:justify-evenly px-6 lg:px-8 max-w-10xl h-screen overflow-auto">
                 <Summary navigation={content.navigation} summary={content.summary} />
-                <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-4xl lg:w-1/2 md:w-1/2 lg:p-6 md:p-6 p-3 overflow-y-scroll">
-                    <About title={content.navigation.about} aboutMe={content.aboutMe} />
-                    <Skills title={content.navigation.skills} skills={skills} />
-                    <WorkExperience title={content.navigation.experience} workExperience={content.workExperience} />
-                    <Projects title={content.navigation.projects} projects={content.projects} />
+                <div className="flex-shrink-0 mx-auto lg:mx-0 p-3 md:p-6 lg:p-6 md:w-1/2 lg:w-1/2 max-w-2xl lg:max-w-4xl overflow-y-scroll">
+                    <AboutMe
+                        about={content.navigation.aboutMe.content as IContentItem[]}
+                        link={content.navigation.aboutMe.link}
+                        title={content.navigation.aboutMe.title}
+                    />
+                    <SkillGroup
+                        link={content.navigation.skills.link}
+                        title={content.navigation.skills.title}
+                        skills={content.navigation.skills.content as IContentItem[]}
+                    />
+                    <WorkExperienceGroup
+                        link={content.navigation.workExperience.link}
+                        title={content.navigation.workExperience.title}
+                        workExperiences={content.navigation.workExperience.content as IWorkExperience[]}
+                    />
+                    <ProjectGroup
+                        link={content.navigation.projects.link}
+                        title={content.navigation.projects.title}
+                        projects={content.navigation.projects.content as IProject[]}
+                    />
                 </div>
             </div>
-            <div className="absolute top-0 right-0 mt-4 mr-4 flex space-x-4">
-                <div className={`text-gray-300 hover:text-gray-400 ${selectedLanguage == 'pt' ? 'cursor-default opacity-50' : 'cursor-pointer'}`} onClick={() => setSelectedLanguage('pt')}>
-                    <img src="portuguese.png" className="w-8"/>
-                </div>
-                <div className={`text-gray-300 hover:text-gray-400 ${selectedLanguage == 'en' ? 'cursor-default opacity-50' : 'cursor-pointer'}`} onClick={() => setSelectedLanguage('en')}>
-                    <img src="english.png" className="w-8"/>
-                </div>
-            </div>
-        </div>
-    )
-}
+            <LanguageMenu
+                languages={LanguageEnumFunc.getValues()}
+                onChangeLanguage={(value) => setSelectedLanguage(value)}
+                selectedLanguage={selectedLanguage}
+            />
+        </>
+    );
+};
 
 export default Home;
