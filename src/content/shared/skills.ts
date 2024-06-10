@@ -1,12 +1,15 @@
 import { IContentItem } from "@/interfaces/interfaces/IContentItem";
 import {
     SiAmazonaws,
+    SiAmazonec2,
+    SiAmazonecs,
     SiAwsamplify,
     SiAwslambda,
     SiDocker,
-    SiJavascript,
-    SiMongodb,
+    SiDotnet,
+    SiGithubactions,
     SiNestjs,
+    SiNextdotjs,
     SiNodedotjs,
     SiPostgresql,
     SiPython,
@@ -17,16 +20,8 @@ import {
 
 export const Skills: IContentItem[] = [
     {
-        item: "Javascript",
-        icon: SiJavascript
-    },
-    {
         item: "Typescript",
         icon: SiTypescript
-    },
-    {
-        item: "Python",
-        icon: SiPython
     },
     {
         item: "Node.js",
@@ -37,6 +32,22 @@ export const Skills: IContentItem[] = [
         icon: SiNestjs
     },
     {
+        item: ".Net",
+        icon: SiDotnet
+    },
+    {
+        item: "React",
+        icon: SiReact
+    },
+    {
+        item: "Next.js",
+        icon: SiNextdotjs
+    },
+    {
+        item: "Docker",
+        icon: SiDocker
+    },
+    {
         item: "React",
         icon: SiReact
     },
@@ -45,13 +56,17 @@ export const Skills: IContentItem[] = [
         icon: SiServerless
     },
     {
-        item: "Docker",
-        icon: SiDocker
+        item: "Github Actions",
+        icon: SiGithubactions
     },
-    // {
-    //     item: "Github Actions",
-    //     icon: SiGithubactions,
-    // },
+    {
+        item: "EC2",
+        icon: SiAmazonec2
+    },
+    {
+        item: "ECS",
+        icon: SiAmazonecs
+    },
     {
         item: "AWS",
         icon: SiAmazonaws
@@ -69,7 +84,7 @@ export const Skills: IContentItem[] = [
         icon: SiPostgresql
     },
     {
-        item: "MongoDB",
-        icon: SiMongodb
+        item: "Python",
+        icon: SiPython
     }
 ];
