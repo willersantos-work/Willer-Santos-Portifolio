@@ -32,7 +32,7 @@ export const Tooltip: React.FC<ITooltipProps> = ({ children, message, position: 
             }}
             title={message}
         >
-            {children}
+            <div>{children}</div>
         </TooltipMUI>
     );
 };

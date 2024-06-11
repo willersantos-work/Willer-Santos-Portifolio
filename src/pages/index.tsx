@@ -4,19 +4,16 @@ import { SkillGroup } from "@/components/Content/Skills/SkillGroup/SkillGroup";
 import { WorkExperienceGroup } from "@/components/Content/WorkExperience/WorkExperienceGroup/WorkExperienceGroup";
 import { LanguageMenu } from "@/components/Language/LanguageMenu/LanguageMenu";
 import { Summary } from "@/components/Summary/Summary";
-import enContent from "@/content/en/main";
-import ptContent from "@/content/pt/main";
-import { LanguageEnum, LanguageEnumFunc } from "@/interfaces/enum/Language.enum";
+import { useLanguage } from "@/context/language/languageContext";
+import { LanguageEnumFunc } from "@/interfaces/enum/Language.enum";
 import { IContentItem } from "@/interfaces/interfaces/IContentItem";
 import { IProject } from "@/interfaces/interfaces/IProject";
 import { IWorkExperience } from "@/interfaces/interfaces/IWorkExperience";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const Home: React.FC = () => {
     const ref = useRef<HTMLDivElement | null>(null);
-    const [selectedLanguage, setSelectedLanguage] = useState<LanguageEnum>(LanguageEnum.enUS);
-
-    const content = selectedLanguage === LanguageEnum.enUS ? enContent : ptContent;
+    const { content } = useLanguage();
 
     useEffect(() => {
         const hash = window.location.hash;
@@ -27,7 +24,7 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <div className="flex md:flex-row lg:flex-row flex-col md:justify-evenly lg:justify-evenly px-6 lg:px-8 max-w-10xl h-screen overflow-auto">
+            <div className="flex md:flex-row lg:flex-row flex-col md:justify-evenly lg:justify-evenly px-2 md:px-6 lg:px-8 max-w-10xl h-screen overflow-auto">
                 <Summary navigation={content.navigation} summary={content.summary} />
                 <div className="flex-shrink-0 mx-auto lg:mx-0 p-3 md:p-6 lg:p-6 md:w-1/2 lg:w-1/2 max-w-2xl lg:max-w-4xl overflow-y-scroll">
                     <AboutMe
@@ -52,11 +49,7 @@ const Home: React.FC = () => {
                     />
                 </div>
             </div>
-            <LanguageMenu
-                languages={LanguageEnumFunc.getValues()}
-                onChangeLanguage={(value) => setSelectedLanguage(value)}
-                selectedLanguage={selectedLanguage}
-            />
+            <LanguageMenu languages={LanguageEnumFunc.getValues()} />
         </>
     );
 };
