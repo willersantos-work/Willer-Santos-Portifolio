@@ -1,6 +1,6 @@
 export enum LanguageEnum {
-    ptBR = "Portugues",
-    enUS = "Inglês"
+    ptBR = "pt-BR",
+    enUS = "en-US"
 }
 
 export class LanguageEnumFunc {
