@@ -4,8 +4,7 @@ interface ICompanyDescriptionProps {
 }
 
 export const CompanyDescription: React.FC<ICompanyDescriptionProps> = ({ company, role }) => (
-    <h2 className="flex flex-wrap justify-start items-center gap-2 font-light text-2xl text-white tracking-tight">
-        {role} @
-        <span className="font-extralight text-purple-300 text-xl">{company ? `${company}` : "Open to work"}</span>
+    <h2 className="flex flex-wrap justify-start items-center gap-2 text-white tracking-tight tag-h2-bold">
+        {role} @<span className="text-purple-1 tag-h2">{company ? `${company}` : "Open to work"}</span>
     </h2>
 );

@@ -41,15 +41,15 @@ export const Projects: IProject[] = [
         ]
     },
     {
-        title: "Site institucional US | 2023",
-        description: "Desenvolvimento front-end do site institucional US da igc Partners.",
+        title: "Site corporation US | 2023",
+        description: "Desenvolvimento front-end do site corporation US da igc Partners.",
         url: "https://igcp.com",
         technologies: ["Next.js", "Tailwind", "Amplify", "Web", "App"]
     },
     {
-        title: "Site institucional BR | 2023",
+        title: "Site corporation BR | 2023",
         description:
-            "Otimização de performance (front-end e CMS) e melhoria visual do site institucional BR da igc Partners.",
+            "Otimização de performance (front-end e CMS) e melhoria visual do site corporation BR da igc Partners.",
         url: "https://igcp.com.br",
         technologies: ["Next.js", "CI/CD", "Tailwind", "Infra", "CMS", "Amplify", "AWS EC2", "AWS ECS", "Web", "App"]
     },

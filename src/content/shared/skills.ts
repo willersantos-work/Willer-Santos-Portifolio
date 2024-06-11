@@ -44,6 +44,10 @@ export const Skills: IContentItem[] = [
         icon: SiNextdotjs
     },
     {
+        item: "Python",
+        icon: SiPython
+    },
+    {
         item: "Docker",
         icon: SiDocker
     },
@@ -83,8 +87,5 @@ export const Skills: IContentItem[] = [
         item: "PostgreSQL",
         icon: SiPostgresql
     },
-    {
-        item: "Python",
-        icon: SiPython
-    }
+    
 ];

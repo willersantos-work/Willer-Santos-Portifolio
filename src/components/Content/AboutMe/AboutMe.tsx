@@ -1,5 +1,4 @@
 import { IContentItem } from "@/interfaces/interfaces/IContentItem";
-import { FC } from "react";
 import { SessionTitle } from "../SessionTitle/SessionTitle";
 
 interface IAboutMeProps {
@@ -8,11 +7,11 @@ interface IAboutMeProps {
     title: string;
 }
 
-export const AboutMe: FC<IAboutMeProps> = ({ about, link, title }) => (
+export const AboutMe: React.FC<IAboutMeProps> = ({ about, link, title }) => (
     <div id={link}>
         <SessionTitle title={title} />
         {about.map(({ item }, index) => (
-            <p key={index} className="mt-4 text-justify text-zinc-200/90 leading-8">
+            <p key={index} className="mt-4 text-gray-0/90 text-justify leading-8 tag-h3">
                 {item}
             </p>
         ))}

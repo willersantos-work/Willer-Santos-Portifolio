@@ -28,7 +28,7 @@ export const Footer: React.FC<IFooterProps> = ({ summary }) => {
                             href={`${item?.isEmail ? "mailto:" : ""}${item?.title}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:bg-white/10 p-1.5 rounded-md text-white hover:text-zinc-200/90 transition-all duration-300"
+                            className="hover:bg-white/10 p-1.5 rounded-md text-white hover:text-gray-0/90 transition-all duration-300"
                         >
                             <Icon size={24} />
                         </a>

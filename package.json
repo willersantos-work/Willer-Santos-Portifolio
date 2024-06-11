@@ -10,11 +10,14 @@
     "lint:fix": "npx eslint . --fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@heroicons/react": "^2.0.18",
+    "@mui/material": "^5.15.19",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
     "autoprefixer": "10.4.15",
     "eslint": "^8.56.0",
     "eslint-config-next": "13.4.16",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
     "next": "13.4.16",
     "postcss": "8.4.27",
     "react": "18.2.0",

@@ -13,11 +13,11 @@ interface ISummaryProps {
 export const Summary: React.FC<ISummaryProps> = ({ summary, navigation }) => (
     <div className="flex flex-col justify-evenly md:justify-evenly lg:justify-center items-start gap-8 bg-black/10 p-8 rounded-xl w-full max-w-2xl lg:max-w-xl h-auto">
         <div className="flex flex-col items-start h-auto">
-            <h1 className="pb-4 font-bold text-4xl text-white tracking-tight">{summary.fullname}</h1>
+            <h1 className="pb-4 text-white tracking-tight tag-h1">{summary.fullname}</h1>
             <CompanyDescription company={summary?.company} role={summary.role} />
-            <p className="py-2 h-auto md:h-0 lg:h-auto lg:visible font-light text-base text-justify text-zinc-200/90 leading-8 md:invisible visible">
+            <h3 className="py-2 h-auto md:h-0 lg:h-auto lg:visible text-gray-0/90 text-justify leading-8 md:invisible tag-h3 visible">
                 {summary.bio}
-            </p>
+            </h3>
         </div>
         <FastMenu navigation={navigation} />
         <Footer summary={summary} />
