@@ -19,7 +19,9 @@ export const WorkExperienceGroup: React.FC<IWorkExperienceGroupProps> = ({ link,
                 {workExperiences.map((workExperience, index) => (
                     <WorkExperience
                         key={index}
-                        onChange={(company) => setSelectedWork(company === selectedWork ? undefined : company)}
+                        onChange={(companyAndRole) =>
+                            setSelectedWork(companyAndRole === selectedWork ? undefined : companyAndRole)
+                        }
                         selectedWork={selectedWork}
                         workExperience={workExperience}
                     />

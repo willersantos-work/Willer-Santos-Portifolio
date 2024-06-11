@@ -3,7 +3,7 @@ import { useLanguage } from "@/context/language/languageContext";
 import { IWorkExperience } from "@/interfaces/interfaces/IWorkExperience";
 
 interface IWorkExperienceProps {
-    onChange: (company: string) => void;
+    onChange: (companyAndRole: string) => void;
     selectedWork?: string;
     workExperience: IWorkExperience;
 }
@@ -30,10 +30,13 @@ export const WorkExperience: React.FC<IWorkExperienceProps> = ({
                     <Badge key={index} text={tech} />
                 ))}
             </div>
-            <button className="text-purple-3 text-start hover:text-purple-1 tag-h4" onClick={() => onChange(company)}>
+            <button
+                className="text-purple-3 text-start hover:text-purple-1 tag-h4"
+                onClick={() => onChange(`${company}${role}`)}
+            >
                 {workButtonLabel}
             </button>
-            {selectedWork === company &&
+            {selectedWork === `${company}${role}` &&
                 description.map((paragraph, index) => (
                     <p key={index} className="text-gray-0 text-justify leading-4 tag-p">
                         {paragraph}
