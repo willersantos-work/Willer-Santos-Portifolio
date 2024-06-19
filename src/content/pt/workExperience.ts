@@ -38,7 +38,7 @@ export const WorkExperience: IWorkExperience[] = [
         role: "IT Intern",
         period: "Set 2021 — Dez 2021 | Mai 2022 — Ago 2022",
         description: [
-            "Desenvolvimento de execuções desde de desenvolvimento até produção seguindo o método Scrum, utilizando ferramentas como Postman, AWS (Lambda e CloudWatch), Azure (Build e Release) e Git"
+            "Desenvolvi execuções desde de desenvolvimento até produção seguindo o método Scrum, utilizando ferramentas como Postman, AWS (Lambda e CloudWatch), Azure (Build e Release) e Git"
         ],
         technologies: ["React", ".Net Core", "Kubernetes", "Jenkins", "CI/CD", "PostgreSQL"]
     },
@@ -47,8 +47,8 @@ export const WorkExperience: IWorkExperience[] = [
         role: "Organizador 31º Workshop Integrativo",
         period: "Fev 2021 — Set 2021",
         description: [
-            "Atuação na organização da análise de dados (estruturação do uso de dados e estratégia de coleta de dados).",
-            "Participação como meio de comunicação com as empresas, para acompanhamento de vendas e organização das empresas no evento."
+            "Atuei na organização da análise de dados (estruturação do uso de dados e estratégia de coleta de dados).",
+            "Participei como meio de comunicação com as empresas, para acompanhamento de vendas e organização das empresas no evento."
         ],
         technologies: ["Data analysis", "Python"]
     },
@@ -57,9 +57,9 @@ export const WorkExperience: IWorkExperience[] = [
         role: "Analista de Projetos",
         period: "Ago 2020 — Set 2021",
         description: [
-            "Execução de projetos com React, React Native e Node (Express) em estrutura de tribo",
-            "Participação em projetos de ideação de sites e apps com Figma",
-            "Planejamento de projetos, como modelagem de banco de dados, documentação e desenvolvimento de backlog de tarefas."
+            "Executei projetos com React, React Native e Node (Express) em estrutura de tribo",
+            "Participei de projetos de ideação de sites e apps com Figma",
+            "Atuei no planejamento de projetos, como modelagem de banco de dados, documentação e desenvolvimento de backlog de tarefas."
         ],
         technologies: ["React", "React Native", "Node.js (Express)", "PostgreSQL", "Figma", "Design Thinking"]
     }

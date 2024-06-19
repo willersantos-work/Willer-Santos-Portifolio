@@ -7,5 +7,5 @@ export const AboutMe: IContentItem[] = [
     {
         item: "Atuei em projetos de tecnologia no mercado financeiro, liderei times em projetos e atuei com diversas frentes diferentes, estando sempre apto a novos aprendizados e conhecer pessoas novas."
     },
-    { item: "Atualmente resido em São Paulo, Brasil." }
+    { item: "Atualmente, resido em São Paulo, Brasil." }
 ];

@@ -4,7 +4,7 @@ export const Projects: IProject[] = [
     {
         title: "Connect HR | 2023 and 2024",
         description:
-            "Creation of a system for employee management with different modules, such as vacation module, team allocation, personal data, and integration for automated employee creation and deactivation in other systems. In this project, I led other developers and was involved from the beginning in prototyping and design to the final stages of infrastructure and deployment.",
+            "I built in a system for employee management with different modules, such as vacation module, team allocation, personal data, and integration for automated employee creation and deactivation in other systems. In this project, I led other developers and code, which I was involved from the start stage, prototyping and design, until the final stage, infrastructure and deployment.",
         technologies: [
             "Node.js (Nest)",
             "React",
@@ -21,13 +21,13 @@ export const Projects: IProject[] = [
     },
     {
         title: "Let's Buy | 2024",
-        description: "Development of the company's internal purchase CRM.",
+        description: "I led and code for a company's internal purchase CRM.",
         technologies: ["Node.js (Nest)", "React", "Design Thinking", "Figma", "Web"]
     },
     {
         title: "ExpenseHub | 2023 and 2024",
         description:
-            "Development of an expense CRM, with invoice reading and integration with the SAP API. I led developers and was involved in the entire product cycle.",
+            "I built in with a developer, where I was the leader, an expense CRM, with invoice reading and integration with the SAP API. I led developers and was involved in the entire product cycle.",
         technologies: [
             "Node.js (Nest)",
             "Next.js",
@@ -49,15 +49,14 @@ export const Projects: IProject[] = [
     {
         title: "BR Institutional Website | 2023",
         description:
-            "Performance optimization (front-end and CMS) and visual improvement of the BR institutional website for IGC Partners.",
+            "I worked on performance optimization (front-end and CMS) and visual improvement of the BR institutional website for IGC Partners.",
         url: "https://igcp.com.br",
         technologies: ["Next.js", "CI/CD", "Tailwind", "Infra", "CMS", "Amplify", "AWS EC2", "AWS ECS", "Web", "App"]
     },
     {
         title: "Document Automation | 2023",
         description:
-            "Using AWS Lambda for automation to fill out contracts and spreadsheets using data from an external API (Gupy).",
-        url: "https://igcp.com.br",
+            "I developed using AWS Lambda, to build an automation to fill out contracts and spreadsheets using data from an external API (Gupy).",
         technologies: ["AWS Lambda", "Typescript", "Serverless", "CI/CD"]
     },
     {
@@ -80,24 +79,24 @@ export const Projects: IProject[] = [
     },
     {
         title: "Manu | 2021",
-        description: "Participation in back-end development for a building maintenance CRM.",
+        description: "I took part in back-end development for a building maintenance CRM.",
         technologies: ["Node.js (Express)", "Web"]
     },
     {
         title: "Motherly | 2021",
-        description: "Participation in back-end development for a mental health support app for pregnant women.",
+        description: "I took part in back-end development for a mental health support app for pregnant women.",
         technologies: ["React Native", "App"]
     },
     {
         title: "AmbevOn | 2021",
         description:
-            "Conception and development of the front-end for the Ambev campaign website at Poli-USP, known as AmbevOn.",
+            "I worked on conception and development of the front-end for the Ambev campaign website at Poli-USP, known as AmbevOn.",
         technologies: ["Design Thinking", "Web"]
     },
     {
         title: "SyntrApp | 2021",
         description:
-            "Design conception and development of a system for managing eco-sustainable planting areas with two other developers, mentoring front-end training and idea conception, later working on the back-end.",
+            "I worked with two other developers, where we design conception and developed a system for managing eco-sustainable planting areas, where I was able to mentor front-end training and idea conception for this developers, later I worked on the back-end.",
         technologies: ["Figma", "Design Thinking", "Node.js (Express)", "Training", "Web"]
     },
     {

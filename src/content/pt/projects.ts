@@ -4,7 +4,7 @@ export const Projects: IProject[] = [
     {
         title: "Connect RH | 2023 e 2024",
         description:
-            "Criação de sistema para gestão de colaboradores com diferentes módulos, como módulo de férias, alocação de times, dados cadastrais, além de integração de criação automatizada de colaboradores e inativação em outros sistemas. Nesse projeto atuei liderando outros desenvolvedores e estive desde o ínicio na parte de prototipação e design até a ponta final de infraestrutura e deploy.",
+            "Criação de sistema para gestão de colaboradores com diferentes módulos, como módulo de férias, alocação de times, dados cadastrais, além de integração de criação automatizada de colaboradores e inativação em outros sistemas. Atuei liderando outros desenvolvedores e desenvolvendo, estive desde o ínicio na parte de prototipação e design até a ponta final de infraestrutura e deploy.",
         technologies: [
             "Node.js (Nest)",
             "React",
@@ -57,7 +57,6 @@ export const Projects: IProject[] = [
         title: "Automação de documentos | 2023",
         description:
             "Utilização de AWS Lambda para automação que preencher contratos e planilhas utilizando dado de API externa (Gupy).",
-        url: "https://igcp.com.br",
         technologies: ["AWS Lambda", "Typescript", "Serverless", "CI/CD"]
     },
     {
