@@ -1,3 +1,4 @@
+import { Tooltip } from "@/components/Tooltip/Tooltip";
 import { ISummary } from "@/interfaces/interfaces/ISummary";
 import { ISummaryLink } from "@/interfaces/interfaces/ISummaryLink";
 
@@ -7,6 +8,7 @@ interface IFooterProps {
 
 export const Footer: React.FC<IFooterProps> = ({ summary }) => {
     const footerItems: (keyof ISummary)[] = [
+        "cvLink",
         "instagramLink",
         "githubLink",
         "linkedinLink",
@@ -30,7 +32,9 @@ export const Footer: React.FC<IFooterProps> = ({ summary }) => {
                             rel="noopener noreferrer"
                             className="hover:bg-white/10 p-1.5 rounded-md text-white hover:text-gray-0/90 transition-all duration-300"
                         >
-                            <Icon size={24} />
+                            <Tooltip message={item.message}>
+                                <Icon size={24} />
+                            </Tooltip>
                         </a>
                     );
             })}
