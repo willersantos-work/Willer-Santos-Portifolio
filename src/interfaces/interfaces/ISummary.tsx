@@ -6,6 +6,7 @@ export interface ISummary {
     bio: string;
     company?: string;
     email: ISummaryLink;
+    cvLink?: ISummaryLink;
     githubLink?: ISummaryLink;
     linkedinLink?: ISummaryLink;
     mediumLink?: ISummaryLink;
